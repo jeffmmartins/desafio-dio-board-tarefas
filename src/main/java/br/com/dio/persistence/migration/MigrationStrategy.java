@@ -2,6 +2,7 @@ package br.com.dio.persistence.migration;
 
 import lombok.AllArgsConstructor;
 
+import java.io.FileOutputStream;
 import java.sql.Connection;
 
 @AllArgsConstructor
@@ -12,5 +13,12 @@ public class MigrationStrategy {
      //Trabalhar com o liquibase
      private void executeMigration(){
 
+          var originalOut = System.out;
+          var originalErr = System.out;
+          try{
+               try{var fos = new FileOutputStream("liquibase.org")){
+
+               }
+          }
      }
 }
