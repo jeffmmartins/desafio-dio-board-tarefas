@@ -3,12 +3,22 @@ plugins {
     id 'java'
     // Outros plugins que você possa ter, como 'application'
     id 'application'
+    id 'org.liquibase.gradle' version '2.2.0'
 }
 
 // O restante do seu arquivo de configuração
 
 repositories {
     mavenCentral()
+}
+
+liquibase {
+    activities {
+        main {
+            // A chave 'propertyFile' aponta para o seu arquivo de propriedades
+            propertyFile 'src/main/resources/liquibase.properties'
+        }
+    }
 }
 
 dependencies {
