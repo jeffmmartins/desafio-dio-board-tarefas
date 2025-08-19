@@ -1,0 +1,26 @@
+plugins {
+    // Adicione esta linha:
+    id 'java'
+    // Outros plugins que você possa ter, como 'application'
+    id 'application'
+}
+
+// O restante do seu arquivo de configuração
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Agora você pode usar 'implementation' aqui
+    implementation 'org.liquibase:liquibase-core:4.29.1'
+    implementation 'org.projectlombok:lombok:1.18.34'
+    runtimeOnly 'org.postgresql:postgresql:42.7.3'
+
+
+
+    // E 'testImplementation' para dependências de teste
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+// Outras configurações...
